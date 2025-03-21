@@ -1,0 +1,14 @@
+abbiamo classe studente e classe docente
+età voto ed età materia
+possiamo migliorare?
+superclasse persona, che ha età, e poi studente e docente la ereditano + hanno le cose loro specifiche
+così se vuoi aggiungere nome e cognome li metti
+eccetera eccetera, se fai cambiamenti eccetera polimorfismo uaoh
+
+public class Studente extends Persona
+Persona è la superclasse, Studente è la sottoclasse
+Nel costruttore della sottoclasse chiamiamo il costruttore della superclasse usando la keyword super()
+
+Java ha ereditarietà singola, quindi estendi una sola classe
+In Python puoi estendere più classi
+Se un attributo è private, la sottoclasse non ci può comunque accedere, usi super.setNome() per esempio
