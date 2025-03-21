@@ -1,0 +1,32 @@
+Usiamo gli oggetti per modellare la realtà
+Numeri di conto. Classe ContoCorrente. Attributi String numeroDiConto, int saldo.
+Il NDC va unico, quando lo crei controlla se ce n'è uno uguale.
+Metodi per il CC.
+Classe Cliente: nome, cognome, contoCorrente. metodi per vedere nome, cognome e CC.
+Le cose static si vedono dappertutto a prescindere ma lasciamo stare chiusa parentesi appena aperta.
+È possibile avere come attributi una classe, per esempio un cliente ha un CC come attributo.
+Perché ho fatto la classe Cliente e non Persona? Che differenza fa?
+	Nessuna a livello di programmazione, ma un po' a livello di significato.
+		Il nome indica a noi umani, non al computer, che il contesto è solo persone che hanno un conto corrente.
+
+Tutti i tipi primitivi hanno anche una classe wrapper corrispondente.
+Puoi concatenare una stringa e un tipo primitivo o una String con un +: "La stringa è "+laMiaStringa+" e il numero è "+ilMioInt
+Chiamare un costruttore tra gli attributi non si fa quasi mai.
+
+Ogni classe deve avere il suo scopo. Il main lo mettiamo in una classe a parte.
+
+Per l'output, altri linguaggi hanno funzioni o keyword. In Java c'è la classe System. Si fa System.out.println().
+println() è un metodo statico, cioè non viene chiamato tramite un oggetto, ma direttamente dalla classe.
+
+Per compilare un progetto con più file, o facciamo javac quellocheciserve.java e capisce da solo le dipendenze, o facciamo javac *.java e compilaa tutto ciò che trova.
+
+Ricordiamo che se un metodo ha un parametro "cosa" e la classe ha un attributo "cosa", dentro il metodo scriviamo "this.cosa" per riferirci all'attributo, il parametro invece è semplicemente "cosa". A dire il vero, dargli lo stesso nome è convenzione, soprattutto nei costruttori, come abbiamo già visto. È buona pratica mettere "this." anche se non c'è confusione con un parametro.
+
+Ci sono due tipi di costruttori: con e senza parametri.
+Ricordiamo che tipo "void visualizzaRoba(int numerox)" si dice firma del metodo.
+
+Nota che una classe non può funzionare senza un costruttore.
+Prima abbiamo provato e ha funzionato, diciamo, perché?
+Java mette a disposizione un costruttore di default. Tutte le classi ereditano da una classe che si chiama Object.
+	Object mette a disposizione un costruttore default a tutti gli oggetti.
+Questo costruttore smette di esistere appena definisci un costruttore vero e proprio per la classe.
