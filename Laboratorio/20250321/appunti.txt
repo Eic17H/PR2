@@ -12,3 +12,36 @@ Nel costruttore della sottoclasse chiamiamo il costruttore della superclasse usa
 Java ha ereditarietà singola, quindi estendi una sola classe
 In Python puoi estendere più classi
 Se un attributo è private, la sottoclasse non ci può comunque accedere, usi super.setNome() per esempio
+
+
+
+
+Facciamo l'override quando abbiamo un metodo generico nella superclasse, e vogliamo renderlo specifico in una sottoclasse.
+Magari abbiamo una superclasse conto che ha un metodo prelievo(), e vogliamo che nella sottoclasse contoCorrente la stessa funzione faccia le stesse cose, con l'aggiunta del fatto che deve tenere traccia di quanti prelievi si fanno.
+In questo caso, si fa una classe con la stessa firma, si chiama il metodo super.prelievo(), e si aggiungono le istruzioni che servono.
+Si aggiunge il decoratore @Override, così il compilatore ci avverte se non abbiamo dato la stessa firma al metodo della sottoclasse.
+
+
+(ciò che segue è in markdown)
+
+```
+class Docente extends Persona{}
+...
+Persona persona = new Docente();
+```
+Si può fare? Sì, si chiama *upcast*. Quando si fa, però, si possono usare solo i metodi e gli attributi della classe `Persona`, nonostante stiamo istanziando un oggetto di classe `Docente`.
+
+L'operazione inversa è detta *downcast*:
+```
+Docente docente = (Docente) persona;
+```
+Castando l'oggetto di prima alla classe `Docente` posso adesso usare tutti i metodi della classe `Docente` e anche quelli di `Persona`.
+
+Per controllare se un oggetto appartiene a una classe, uso la keyword `instanceof`
+```
+if(persona instanceof Docente){
+	Docente docentePersona = (Docente) persona;
+}
+```
+
+Usiamo il casting, e vediamo come interagisce con l'[[override]].
